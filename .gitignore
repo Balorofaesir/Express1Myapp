@@ -1,16 +1,21 @@
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-# Book build output
-_book
+// app.delete('/api/products/:id', (req, res) => {
+//   const itemIndex = filtered.findIndex(element => element.id === parseInt(req.params.id));
+//   if (itemIndex >= 0) {
+//     filtered.splice(itemIndex, 1);
+//   }
+//   res.send(filtered);
+// });
+// ​
+// app.post('/api/products', (req, res) => {
+//   console.log(JSON.stringify(req.body));
+//   res.send(req.body)
+// })
+​const express = require ('express');
+const morgan = require('morgan');
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
+const now = new Date();
+const port = 8080;
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))

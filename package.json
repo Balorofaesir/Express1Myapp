@@ -1,7 +1,6 @@
 {
   "name": "express1myapp",
   "version": "1.0.0",
-  "description": "",
   "main": "myApp.js",
   "scripts": {
     "start": "node index.js",
@@ -12,9 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balorofaesir/Express1Myapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Balorofaesir/Express1Myapp/issues"
+  },
+  "homepage": "https://github.com/Balorofaesir/Express1Myapp#readme",
+  "description": ""
 }
