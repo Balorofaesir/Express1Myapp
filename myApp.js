@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(morgan("tiny"))
+app.use(morgan("tiny"));
 
 const about = {
   name: "Salomón Vásquez",
@@ -144,8 +144,15 @@ app.post("/api/products/", (req, res) => {
       ProductExistance = true;
     }
   }
-  if (newproduct.title === null || newproduct.title === undefined || newproduct.title === "") {
-    res.status(404).send("Error: title required");
+  if (
+    newproduct.title === null ||
+    newproduct.title === undefined ||
+    newproduct.title === "" ||
+    newproduct.price === null ||
+    newproduct.price === undefined ||
+    newproduct.price === ""
+  ) {
+    res.status(404).send("Error: title or Price required");
   } else if (ProductExistance === true) {
     res.status(404).send("Error: Existing title");
   } else {
